@@ -19,6 +19,7 @@ function MyCard({ id, name, avatar, grade, age }) {
         <Card.Text>ID: {id}</Card.Text>
         <Card.Text>Age: {age}</Card.Text>
         <Card.Text>Grade: {grade}</Card.Text>
+        <Button variant='primary'>Go somewhere</Button>
       </Card.Body>
     </Card>
   )

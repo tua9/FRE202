@@ -1,10 +1,16 @@
 import './App.css';
 import About from './components/About';
+import { listOfStudent } from './listOfStudent';
 
 function App() {
   return (
     <div className="App">
-      <About />
+      {listOfStudent.map(student => (
+        <About
+          key={student.id}
+          student={student}
+        />
+      ))}
     </div>
   );
 }
