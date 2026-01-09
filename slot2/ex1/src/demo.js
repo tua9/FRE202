@@ -19,6 +19,8 @@ let student = {id: 1, name: 'Charlie', age: 20, grade: 'A'};
 printStudent(student);
 
 //Khai báo 1 list of students và in từng student trong list bằng hàm printStudent
+console.log("------List of students------");
+
 const students = [
     {id: 2, name: 'David', age: 21, grade: 'B'},
     {id: 3, name: 'Eva', age: 22, grade: 'A'},
@@ -43,3 +45,31 @@ for(let i = 0; i < students.length; i++) {
 for(const student of students) {
     printStudent(student);
 }
+
+//Dùng destructuring để lấy thuộc tính từ đối tượng student
+console.log ('--- Destructuring ---');
+
+const printStudentDestructured = ({id, name, age, grade}) => {
+    console.log(`id: ${id} name: ${name} age: ${age} grade: ${grade}`);
+}
+
+students.forEach(student => {
+    printStudentDestructured(student);
+});
+
+
+//Dùng rest operator để in tất cả các tên học sinh
+console.log ('--- Rest Operator ---');
+const [student1, student2, ...restStudents] = students;
+console.log(`Student 1: ${student1.name}`);
+console.log(`Student 2: ${student2.name}`);
+console.log('Rest of the students:');
+restStudents.forEach(student => console.log(student.name));
+
+//Thêm 1 student mới vào restStudents sử dụng spread operator
+console.log("------Adding a new student------");
+
+const newStudent = {id: 12, name: 'Nina', age: 24, grade: 'AA'};
+const updatedStudents = [ newStudent, ...restStudents, newStudent ];
+console.log('Updated Students List:');
+updatedStudents.forEach(student => printStudent(student));
