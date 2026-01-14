@@ -7,7 +7,7 @@ export default function Student({ student }) {
       className='h-100 text-center shadow-sm'
       style={{
         width: '18rem',
-        backgroundColor: 'rgb(167, 218, 255)',
+        backgroundColor: 'rgba(212, 234, 249, 0.54)',
       }}
     >
       <Card.Img
