@@ -1,7 +1,7 @@
 export const listOfStudent = [
     {
         id: 1,
-        name: 'Alice',
+        name: 'Alice 333',
         avatar:
             'https://randomuser.me/api/portraits/men/1.jpg',
         grade: 'A',
