@@ -12,6 +12,8 @@ export default function Menu({ items }) {
               key={index}
               xs={6}
               md={3}
+              xl={2}
+              lg={1}
               className='d-flex justify-content-center mb-4'
             >
               <MenuItem
