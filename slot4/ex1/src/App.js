@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import BannerImage from "./data/BannerImage";
-import MenuItem from "./data/MenuItem";
+import PizzaList from './data/PizzaList';
 
 import './App.css';
 import Navigation from './components/Navigation';
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Banner images={BannerImage} />
-      <Menu items={MenuItem} />
+      <Menu items={PizzaList} />
       <BookTable />
     </div>
   );
