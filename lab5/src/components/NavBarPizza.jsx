@@ -45,21 +45,12 @@ export default function NavBarPizza() {
             </NavLink>
 
             <NavLink
-              to='/about'
+              to='/quiz'
               className={({ isActive }) =>
                 'nav-link' + (isActive ? ' active' : '')
               }
             >
-              Giới thiệu
-            </NavLink>
-
-            <NavLink
-              to='/contact'
-              className={({ isActive }) =>
-                'nav-link' + (isActive ? ' active' : '')
-              }
-            >
-              Liên hệ
+              Quiz
             </NavLink>
           </Nav>
         </Navbar.Collapse>

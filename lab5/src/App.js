@@ -8,6 +8,7 @@ import Home from './components/Home';
 import DangKy from './components/DangKy'; // hoặc DangKyForm nếu tên file khác
 import NewPage from './pages/NewPage';     // ← import NewPage
 import SlideBar from './components/SlideBar'; // nếu có
+import Quiz from './components/Quiz';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<DangKy />} />
         <Route path="/news" element={<NewPage />} />   {/* ← thêm route này */}
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </Router>
   );
