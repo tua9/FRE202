@@ -1,0 +1,74 @@
+PRACTICAL EXAMINATION 02
+Subject code: FER202 – FA25
+Duration: 85 minutes
+You need to create a user account management application by creating an react application.
+Note:
+Students must install and configure all required packages before the test, such as: json-server, react-router-dom, react-bootstrap bootstrap, axios, react-icons,…
+Students are allowed to use resources stored on their computers but are not allowed to use the Internet during the test (except for submitting the exam).
+If identical test results are detected, the students’ work will receive a score of zero.
+If the code does not run or does not use db.json in Given folder, the students’ work will receive a score of zero.
+A deduction of 0.5 point will be applied in the following cases: 
+Not using React Bootstrap components
+Not using axios or fetch to interact with the JSON Server.
+Students will receive 100% of the total marks if they use Redux Toolkit or useContext combined with useReducer; otherwise, 1 point will be deducted from the total score.
+Submit a folder containing your project (excluding node_modules) and a readme.txt (listing installed packages and how to run, if applicable). 
+The application should include the following functionalities:
+Project scaffold: (0.25 mark) Create a React application named fer202-02 
+Project structure: (0.75 mark)
+Organize the source into meaningful folders: components, pages, contexts, services, routes…(0.25 mark)
+Mock data (0.25 mark)
+Copy db.json file in the project root to initialize a JSON server, using the user account data supplied in Given folder. 
+Static assets (0.25 mark)
+Copy all user avatar images into the public/images/users folder. 
+Login Form: (2 marks) 
+Display the login form that authenticates by username or email. (0.25 mark)
+
+Validation and Behavior:
+Validate credentials against accounts fetched from db.json.
+If Username/Email is empty, show “Username or Email is required.” If Password is empty, show “Password is required.” (0.25 mark)
+
+If credentials are incorrect, show an alert “Invalid username/email or password!” (0.25 mark)
+
+If the user’s role is not admin, show an alert: ‘Access denied. Only admin users can log in.’” (0.25 mark)
+If credentials are correct: 
+If the status is locked, an alert is displayed with message: “Account is locked. Please contact admin.” (0.25 mark)
+Otherwise, the show a modal on the center of the login page: “Welcome, <username>! Login successful.”, then click on Continue will redirect to account list page. (0.5 mark)
+You should create a MessageModal component and use it on the login page. (0.25 mark).
+
+Data display: (2 marks)
+Fetch and display accounts from the JSON Server in a responsive table (1 mark)
+Columns: Avatar, Username, Email, Role, Status, Actions. (0.25 mark)
+Each row has 2 action buttons: (0.25 mark)
+View Details, 
+Lock or Unlock (depending on current status) (0.5 mark)
+
+Filter and Sorting (1 mark)
+You should create a FilterBar component and use it on the account list page. (0.25 mark)
+Search by username or email. (0.25 mark)
+Filter by: (0.25 mark)
+Status (All/Active/Locked)
+Role (All/Admin/User)
+Sorting: (0.25 mark)
+By Username (A->Z/ Z->A)
+By Role (Admin/User)
+By Status (Active/Locked)
+View Details (2 marks)
+Clicking View Details, open a detail page which showing the current user with avatar, username, email, role, status. (1.5 mark)
+Clicking Back to Lists button should return to the account list. (0.5 mark)
+
+Lock/ Unlock account (2 marks)
+Clicking Lock (if status is active) or Unlock (if status is locked) shows a confirmation modal:
+Lock: “Lock account <username>? The user cannot log in after this”. (0.25 mark)
+Unlock: “Unlock account <username>?” (0.25 mark)
+
+If confirmed, 
+Update the account status and update the row in-place (no full page reload). Save the updated status to the db.json file. (0.5 mark)
+Show a toast  message: “Locked successfully” or “Unlocked successfully.” (0.25 mark) 
+
+Note: 
+ToastMessage is a component which is used in the account list page (0.25 mark).
+Do not self-lock the currently logged-user admin (show a warning and do nothing). (0.25 mark)
+
+If canceled, close the modal. (0.25 mark)
+
+---END---
